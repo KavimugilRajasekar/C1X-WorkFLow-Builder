@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 12% 8%;
+    --foreground: 220 20% 92%;
+
+    --card: 228 12% 11%;
+    --card-foreground: 220 20% 92%;
+
+    --popover: 228 12% 13%;
+    --popover-foreground: 220 20% 92%;
+
+    --primary: 200 95% 55%;
+    --primary-foreground: 228 12% 4%;
+
+    --secondary: 228 10% 16%;
+    --secondary-foreground: 220 15% 75%;
+
+    --muted: 228 10% 14%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 200 95% 55%;
+    --accent-foreground: 228 12% 4%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 228 10% 18%;
+    --input: 228 10% 18%;
+    --ring: 200 95% 55%;
+
+    --radius: 0.5rem;
+
+    /* Workflow-specific tokens */
+    --canvas-bg: 228 12% 6%;
+    --canvas-grid: 228 10% 12%;
+    --canvas-grid-major: 228 10% 15%;
+
+    --node-trigger: 142 60% 50%;
+    --node-trigger-bg: 142 60% 12%;
+    --node-action: 200 95% 55%;
+    --node-action-bg: 200 95% 10%;
+    --node-logic: 35 95% 55%;
+    --node-logic-bg: 35 95% 10%;
+
+    --node-border: 228 10% 22%;
+    --node-selected: 200 95% 55%;
+    --node-shadow: 0 8px 32px -8px hsla(0, 0%, 0%, 0.5);
+
+    --edge-color: 228 10% 30%;
+    --edge-active: 200 95% 55%;
+
+    --port-color: 228 10% 35%;
+    --port-hover: 200 95% 55%;
+
+    --minimap-bg: 228 12% 10%;
+    --minimap-viewport: 200 95% 55%;
+
+    --sidebar-background: 228 12% 9%;
+    --sidebar-foreground: 220 20% 92%;
+    --sidebar-primary: 200 95% 55%;
+    --sidebar-primary-foreground: 228 12% 4%;
+    --sidebar-accent: 228 10% 14%;
+    --sidebar-accent-foreground: 220 20% 92%;
+    --sidebar-border: 228 10% 16%;
+    --sidebar-ring: 200 95% 55%;
+
+    --toolbar-bg: 228 12% 10%;
+    --toolbar-border: 228 10% 18%;
+
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-display);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .workflow-node-shadow {
+    filter: drop-shadow(0 4px 16px hsla(0, 0%, 0%, 0.4));
+  }
+
+  .workflow-node-glow {
+    filter: drop-shadow(0 0 12px hsl(var(--primary) / 0.3));
+  }
+}
