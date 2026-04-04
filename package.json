@@ -18,13 +18,31 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:lib": "rollup -c rollup.config.ts",
-    "build:lib:watch": "rollup -c rollup.config.ts --watch",
+    "build:lib": "rollup -c rollup.config.js",
+    "build:lib:watch": "rollup -c rollup.config.js --watch",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KavimugilRajasekar/C1X-WorkFLow-Builder"
+  },
+  "keywords": [
+    "workflow",
+    "builder",
+    "visual",
+    "automation",
+    "marketing",
+    "web-component",
+    "custom-element",
+    "drag-and-drop",
+    "canvas"
+  ],
+  "author": "Kavimugil Rajasekar",
+  "license": "MIT",
+  "peerDependencies": {},
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.11",
