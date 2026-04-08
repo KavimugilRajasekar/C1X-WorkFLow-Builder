@@ -370,24 +370,24 @@ npm run build
 ## Usage as Web Component
 
 **Vanilla HTML:**
-html:
+```html
 <script type="module" src="node_modules/c1x-workflow-builder/dist/index.js"></script>
 <c1x-workflow-builder show-branding="true"></c1x-workflow-builder>
 
-
+```
 **React:**
-tsx:
+```tsx
 import 'c1x-workflow-builder';
 
 function App() {
   return <c1x-workflow-builder show-branding="false" />;
 }
-
+```
 
 **Angular:**
-html:
+```html
 <c1x-workflow-builder></c1x-workflow-builder>
-
+```
 
 ## Example Workflow
 
