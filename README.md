@@ -1,4 +1,4 @@
-# C1X-Workflow-Builder
+## C1X-Workflow-Builder
 
 A **visual marketing automation workflow builder** packaged as a **framework-agnostic Web Component**. Build workflows by dragging nodes onto a canvas, connecting them with edges, and exporting/importing them as JSON.
 
@@ -72,7 +72,7 @@ The app follows a strict **4-layer architecture**. Each layer has one job and ta
 5. **React** re-renders WorkflowCanvas with the new nodes array
 6. **Canvas** renders the new node on screen
 
-### Data Flow Example: Host App Exports Workflow
+## Data Flow Example: Host App Exports Workflow
 
 1. **Host app** calls `document.querySelector('c1x-workflow-builder').exportJSON()`
 2. **Web Component** (Layer 2) calls `this.engine.exportJSON()`
@@ -300,14 +300,14 @@ c1x-workflow-builder/
 
 ## Web Component API
 
-### Attributes
+## Attributes
 
 | Attribute | Type | Default | Description |
 |-----------|------|---------|-------------|
 | `initial-data` | JSON string | — | Pre-populate with a workflow JSON object |
 | `show-branding` | boolean | `true` | Show/hide the "c1x workflow builder" watermark |
 
-### Events
+## Events
 
 ```js
 const wc = document.querySelector('c1x-workflow-builder');
@@ -370,30 +370,30 @@ npm run build
 ## Usage as Web Component
 
 **Vanilla HTML:**
-```html
+html:
 <script type="module" src="node_modules/c1x-workflow-builder/dist/index.js"></script>
 <c1x-workflow-builder show-branding="true"></c1x-workflow-builder>
-```
+
 
 **React:**
-```tsx
+tsx:
 import 'c1x-workflow-builder';
 
 function App() {
   return <c1x-workflow-builder show-branding="false" />;
 }
-```
+
 
 **Angular:**
-```html
+html:
 <c1x-workflow-builder></c1x-workflow-builder>
-```
+
 
 ## Example Workflow
 
 The app loads with an "Abandoned Cart Recovery" example:
 
-```
+
 Abandoned Cart Trigger
        │
        ▼
@@ -406,7 +406,7 @@ Abandoned Cart Trigger
   If/Else Condition
     ├── Yes ──► Send SMS (Discount)
     └── No  ──► Adjust Bid (Increase)
-```
+
 
 ## Tech Stack
 
